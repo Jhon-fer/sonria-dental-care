@@ -1,0 +1,51 @@
+.navIcon{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+}
+.navIcon span{
+  position: absolute;
+  width: 80%;
+  height: 4px;
+  border-radius: 2px;
+  transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+  transition-duration: 500ms;
+  background-color:#fff;
+}
+.navIcon span:nth-child(1){
+  top: 5px;
+  left: 0px;
+}
+.navIcon span:nth-child(2){
+  top: 12px;
+  left: 0px;
+  opacity: 1;
+}
+.navIcon span:nth-child(3){
+  bottom: 7px;
+  left: 0px;
+}
+.navIcon:not(.open):hover span:nth-child(1){
+  transform: rotate(-3deg) scaleY(1.1);
+}
+.navIcon:not(.open):hover span:nth-child(2){
+  transform: rotate(3deg) scaleY(1.1);
+}
+.navIcon:not(.open):hover span:nth-child(3){
+  transform: rotate(-4deg) scaleY(1.1);
+}
+.navIcon.open span:nth-child(1){
+  transform: rotate(45deg);
+  top: 13px;
+}
+.navIcon.open span:nth-child(2){
+  opacity: 0;
+}
+.navIcon.open span:nth-child(3){
+  transform: rotate(-45deg);
+  top: 13px;
+}
