@@ -1,0 +1,75 @@
+@import 'globals';
+@import 'mixins';
+
+.slider {
+  width: 100%;
+  height: 600px;
+  background-image: url('../../../public/images/Clinica-de-Implantes-dentales-Centro-de-Implantes-dentales-y-reconstruccion.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    h2, p {
+      padding: 0 10px;
+      width: 100%;
+      font-size: 3rem;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      color: $color-secondary;
+    }
+    p {
+      font-weight: 800;
+      color: $color-primary;
+    }
+    &Buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      a {
+        margin-right: 10px;
+        padding: 10px 25px;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 1px solid $color-primary;
+        border-radius: 50px;
+        transition: all .35s;
+        color: $color-secondary;
+        background-color: $color-primary;
+        &:hover {
+          cursor: pointer;
+          border: 1px solid $color-button-hover;
+          background-color: $color-button-hover;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .slider {
+    height: 750px;
+    &Container {
+      h2, p {
+        max-width: 1024px;
+        font-size: 4.2rem;
+        text-align: left;
+      }
+      &Buttons {
+        justify-content: left;
+        max-width: 1024px;
+        width: 100%;
+      }
+    }
+  }
+
+}
